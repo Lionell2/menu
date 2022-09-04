@@ -1,271 +1,121 @@
-body {
-    background-color: rgb(88, 87, 87);
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  
+*{
+    box-sizing: border-box;
 }
-
-
-.menu_area {
-    width: 100%;
-    background-color: #2f3030;
-    height: 130px;
-
-
-
+body, ul {
+margin: 0;
+padding: 0;
 }
-
-
-header {
-    overflow: hidden;
-    height: 130px;
-   
-}
-
-.menu_logo {
-    display: flex;
-    align-items: center;
-}
-
-.menu_logo img {
-
-    width: 250px;
-
-
-
-
-}
-
-nav {
- display: flex;
-   align-items: center;
-   
-   
-}
-
-nav ul li {
-    list-style: none;
-    margin-left: 20px;
-
-}
-
-nav ul li a {
-    padding: 20px;
-    color: white;
-    font-weight: bold;
+ul a {
     text-decoration: none;
-    font-size: 29px;
-    transition: all 0.2s ease;
+    color: black;
+    font-family: sans-serif ;
 }
-
-nav ul li a:hover {
-    background-color: #de523b;
-    border-radius: 5px;
-    box-shadow: 0 0 15px #f56e5a;
-    text-shadow: 0 0 15 #f56e5a;
+ul a:hover {
+    background-color: rgba(0,0,0, 0.05);
 }
-
-nav ul {
-   display: flex;
-   justify-content: space-around;
- 
+img{
+    width: 15rem;
+}
+#logo img{
+    max-width: 100%;
+    min-width: 100px;
    
-    
 }
-
-.jiraia_frase_texto {
-    margin-left: 30px;
-}
-
-.banner {
-    background-image: url(../img/jiraia.jpg);
-
-    background-size: cover;
-    height: 750px;
-    width: auto;
+header{
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    animation-name: opacity;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-
+    height: 70px;
+    padding: 1rem;
+    justify-content: space-between;
+    background: #e7e7e7;
 }
-
-em {
-
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-    text-shadow: 4px 4px 4px black;
-
-}
-
-.widget {
-    flex: 1;
-}
-
-.widget_title {
-
-    font-weight: bold;
-    font-size: 25px;
-    padding-top: 20px;
-
+#menu{
     display: flex;
-    justify-content: center;
-}
-
-.widget_title_text {
-    background-color: #f56e5a;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    width: 80%;
-    padding: 10px;
-    text-align: center;
-
-}
-
-.widget_body_content {
-    width: auto;
-    display: flex;
-    justify-content: center;
-}
-
-figure img {
-    width: 305px;
-    margin: 0;
-    border-radius: 20px;
-
-
-}
-
-figcaption {
-
-    font-size: 18px;
-    background-color: black;
-    border-radius: 5px;
-    color: white;
-    padding: 5px;
-    width: 295px;
-    text-align: center;
-
-}
-
-.biography_area {
-    background-color: burlywood;
-    width: 80%;
-    height: auto;
-    padding: 10px;
-}
-
-.biography_text {
-    line-height: 30px;
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 20px;
-
-
-}
-
-.biography_image {
-    display: flex;
-    justify-content: center;
-}
-
-.kunai img {
-    width: 60px;
-    rotate: -90deg;
-}
-
-.bt1 {
-    line-height: 27px;
-}
-
-.bt2 {
-    line-height: 28px;
-}
-
-#geral {
-
-    background-image: url(../img/konoha.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-
-
-}
-.menu_mobile{
-
-}
-.mm_line{
-    height: 2px;
-    background-color: white;
-}
-.container {
-    display: flex;
-justify-content: space-around;
-    height: 130px;
-    background-color: #2f3030;
-}
-.Ft{
-    display: flex;
-    flex-direction: column;
-    height: 170px;
-}
-
-footer {
-    width: auto;
-    height: auto;
-}
-
-.fonts {
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px 3px black;
-    font-size: 25px;
-}
-
-.fonts a {
-    text-decoration: underline;
-    color: white;
-
-}
-
-.footer_copy {
-    font-size: 20px;
-    width: 100%;
-    color: #686868;
-    padding-top: 5px;
-    text-align: center;
-    border-top: 0.5px solid #686868;
-}
-
-@keyframes opacity {
-    0% {
-        opacity: 0%;
-    }
-
-    25% {
-        opacity: 25%;
-    }
-
-    50% {
-        opacity: 50%;
-    }
-
-    75% {
-        opacity: 75%;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-}
-
-@media (max-width: 600px) {
+    list-style: none;
+    gap: .5rem;
     
-    nav ul{
-        display: none;
-        flex-direction: column;
+}
+#menu a {
+    display: block;
+    padding: .5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    
+}
+#btn-mobile{
+    display: none;
+}
+@media (max-width:600px){
+  
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100vw;
+        top: 70px;
+        right: 0px;
+        background-image: url(https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png);
+        background-position: center;
+        background-size: cover;
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;      
+        visibility: hidden;
+        overflow-y: hidden;
+        
+    }
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 0;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+        background:transparent
+    }
+    #menu a:hover{
+       background: rgba(0, 0, 0, 0.3);
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    #hamburguer{
+       margin-left: 5px;
+        width: 20px;
+        border-top: 2px solid;
+        
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        
+        border-top: 2px solid;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburguer{
+        color: rgb(194, 4, 4);
+        border-top-color:transparent ;
+        
+    }
+    #nav.active #hamburguer::before{
+       rotate: 45deg;
+    }
+    #nav.active #hamburguer::after  {
+     rotate: -45deg;   
+     top: -7px;
     }
 }
+
